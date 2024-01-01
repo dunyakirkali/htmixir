@@ -8,8 +8,7 @@ defmodule Htmixir.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: Htmixir.Worker.start_link(arg)
-      # {Htmixir.Worker, arg}
+      {Bandit, plug: Htmixir.Router}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
